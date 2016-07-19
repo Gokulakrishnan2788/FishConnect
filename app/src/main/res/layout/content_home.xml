@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.fishconnect.Activities.HomeActivity"
+    tools:showIn="@layout/activity_home">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/spinner_layout"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/searchbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    tools:context=".HomeActivity">
+
+                    <Spinner
+                        android:id="@+id/spinner_wtrbdy"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/searchbar_basin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchbar"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    tools:context=".HomeActivity">
+
+                    <Spinner
+                        android:id="@+id/spinner_basin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/searchbar_specie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchbar_basin"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    tools:context=".HomeActivity">
+
+                    <Spinner
+                        android:id="@+id/spinner_specie"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/spinner_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/result_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="INCIDENT REPORT"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorPrimaryDark"/>
+
+
+                <TextView
+                    android:layout_below="@+id/result_title"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/noresult_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="No Resulst Found"
+                    android:textColor="@android:color/darker_gray"/>
+
+                <ListView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/result_title"
+                    android:id="@+id/result_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
+

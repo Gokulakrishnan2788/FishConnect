@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FishConnect</string>
+    <string name="action_settings">Settings</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Login</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Enter valid password</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_incident_detail">INCIDENT DETAILS</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_fish_result_entry">FISHING RESULT ENTRY</string>
+    <string name="title_activity_forgot_password">FORGOT PASSWORD?</string>
+    <string name="title_activity_view_my_entry">MY ENTRIES</string>
+
+</resources>

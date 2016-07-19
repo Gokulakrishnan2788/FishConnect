@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b9ab51</color>
+    <color name="colorPrimaryDark">#b9ab51</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#7d7d7d</color>
+    <color name="hint">#7e7d7d</color>
+    <color name="actionBarText">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="list_divider">#d9d9d9</color>
+</resources>
+
+
+<!-- text color #6a86a5 net border #5d4d40 cap #0a61f4  #998415 -->

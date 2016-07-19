@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_fish_result_entry"
+    tools:context="net.fishconnect.Activities.FishResultEntryActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="Enter Your Fishing Experience  Below"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:id="@+id/date_layout"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Julian Date"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:background="@drawable/fish_spinner_border"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+
+                    <TextView
+                        android:id="@+id/julian_date"
+                        android:editable="false"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/water_body_layout"
+                android:layout_below="@id/date_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:text="Water Body"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/water_body_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_water_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+
+                android:id="@+id/basin_layout"
+                android:layout_below="@id/water_body_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="basin"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/basin_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_basin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+
+                android:id="@+id/ma_area_layout"
+                android:layout_below="@id/basin_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Major Area"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/ma_area_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_ma_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+
+                android:id="@+id/mi_area_layout"
+                android:layout_below="@id/ma_area_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Minor Area"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/mi_area_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_mi_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/spot_layout"
+                android:layout_below="@id/mi_area_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Spot"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/spot_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_spot"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+
+                android:id="@+id/specie_layout"
+                android:layout_below="@id/spot_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Specie"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/specie_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_specie"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+
+                android:id="@+id/rating_layout"
+                android:layout_below="@id/specie_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Rating"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/rating_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+
+                android:id="@+id/direction_layout"
+                android:layout_below="@id/rating_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Direction"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/direction_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_direction"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/distance_layout"
+                android:layout_below="@id/direction_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Distance"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/distance_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/depth_layout"
+                android:layout_below="@+id/distance_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Depth"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <EditText
+                        android:id="@+id/depth"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        android:hint="depth in ft or inch or cm or meter"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/action_layout"
+                android:layout_below="@id/depth_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Action"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/action_spinner_layout"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:background="@drawable/fish_spinner_border">
+
+                    <Spinner
+                        android:id="@+id/spinner_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/comment_layout"
+                android:layout_below="@+id/action_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:text="Comment"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/fish_spinner_border"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="100dp"
+                    android:layout_weight="70">
+
+                    <EditText
+                        android:id="@+id/comment"
+                        android:focusableInTouchMode="true"
+                        android:background="@android:color/transparent"
+                        android:hint="300 charatcters"
+                        android:text=""
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_below="@+id/comment_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

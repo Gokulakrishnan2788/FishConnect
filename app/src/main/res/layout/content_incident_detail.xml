@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_incident_detail"
+    tools:context="net.fishconnect.Activities.IncidentDetailActivity">
+
+
+    <ScrollView
+        android:layout_above="@+id/map_button"
+        android:id="@+id/fish_result_entry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="0dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <!--  <TextView
+            android:id="@+id/incident_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:text="Incident Details"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"/> -->
+
+
+    <LinearLayout
+        android:id="@+id/j_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:background="@drawable/rounded_border_incident_report"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_incident_report"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Julian Date" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Specie_layout"
+        android:layout_below="@+id/j_date_layout"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:background="@drawable/rounded_light_border_incident_report"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:layout_weight="1">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Specie" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/specie"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/waterbody_layout"
+        android:layout_below="@+id/Specie_layout"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:background="@drawable/rounded_border_incident_report"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_incident_report"
+            android:layout_weight="1">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Water Body" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical|left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/waterbody"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/basin_layout"
+            android:layout_below="@+id/waterbody_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Basin" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/basin"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/major_area_layout"
+            android:layout_below="@+id/basin_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Major Area" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/major_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/minor_area_layout"
+            android:layout_below="@+id/major_area_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Minor Area" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/minor_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/direction_layout"
+            android:layout_below="@+id/minor_area_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Direction" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/direction"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/distance_layout"
+            android:layout_below="@+id/direction_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Distance" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rating_layout"
+            android:layout_below="@+id/distance_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Rating" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/depth_layout"
+            android:layout_below="@+id/rating_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Depth" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/depth"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/action_layout"
+            android:layout_below="@+id/depth_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Action" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/action"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/hot_spot_layout"
+            android:layout_below="@+id/action_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Hot Spot" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/hot_spot"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_below="@+id/hot_spot_layout"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_border_incident_report"
+            android:id="@+id/lat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Latitude" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_below="@+id/lat_layout"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rounded_light_border_incident_report"
+            android:id="@+id/lon_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_light_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Longitude" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/comment_layout"
+            android:layout_below="@+id/lon_layout"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/rounded_border_incident_report"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_incident_report"
+                android:layout_weight="1">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Comment" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+    </ScrollView>
+
+    <Button
+
+        android:id="@+id/map_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="View Spot"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
